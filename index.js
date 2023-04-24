@@ -10,7 +10,7 @@ exports = function (changeEvent) {
   movies
     .updateOne({ _id: documentId }, { $set: magicField })
     .then((result) => {
-      console.log("Document updated successfully:", result);
+      console.log("Document updated successfully:", JSON.stringify(result));
     })
     .catch((error) => {
       console.log("Error updating document:", error);
